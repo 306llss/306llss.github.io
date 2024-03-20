@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>淘东</title>
+    <style>
+      body {
+        margin: 0;
+        /* vh 是view height 既视窗高度的意思，100就是100%占满窗口高度 */
+        height: 100vh;
+        background-color: #eee;
+      }
+      /* * {
+        border: 1px solid #333;
+      } */
+      .flex {
+        display: flex;
+      }
+      /* 占满比例 */
+      .flex1 {
+        flex: 1;
+      }
+      /* 竖向 */
+      .column {
+        flex-direction: column;
+      }
+      /* 阴影 */
+      .yinYing {
+        box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px,
+          rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
+      }
+      /* 白色背景 */
+      .baiSe {
+        background-color: #fff;
+      }
+      .hong{
+        background-color: #F08080;
+      }
+      /* 上下左右外边距 */
+      .mg8 {
+        margin: 8px;
+      }
+      /* 右外边距 */
+      .mgr8 mgt8 {
+        margin-right: 8px;
+      }
+      /* 上外边距 */
+      .mgt8 {
+        margin-top: 8px;
+      }
+      .mgt10 {
+        margin-top: 10px;
+      }
+      /* 四个小盒子 */
+      .shuJu {
+        height: 125px;
+      }
+      /* 中间的大盒子 */
+      .lieBiaoXiang {
+        height: 200px;
+      }
+      /* 导航条 */
+      .daoHang {
+        padding: 10px 20px;
+        border-bottom: 1px solid rgb(201, 201, 201);
+        font-size: 14px;
+        color: #666;
+      }
+      .neiRong::-webkit-scrollbar {
+        display: none; /* Chrome Safari */
+      }
+
+      /* 当屏幕宽度小于600px时要改变的css */
+      
+    </style>
+  </head>
+  <body class="flex">
+    <!-- 侧边栏 -->
+    <div
+      style="width: 150px; z-index: 3"
+      class="ceBian flex column baiSe yinYing"
+    >
+      <!-- 侧边头像栏 -->
+      <div
+        style="
+          padding: 10px;
+          align-items: center;
+          justify-content: center;
+          border-bottom: 1px solid #999;
+        "
+        class="flex"
+      >
+        <img
+          alt="logo"
+          src="https://306llss.github.io/shopping/1.jpg"
+          width="90px"
+          height="80px"
+        />
+      </div>
+      <!-- 导航栏 -->
+      <div class="flex1">
+        <div class="daoHang">导航</div>
+        <div class="daoHang">导航</div>
+        <div class="daoHang">导航</div>
+        <div class="daoHang">导航</div>
+        <div class="daoHang">导航</div>
+      </div>
+    </div>
+    <!-- 主区域 -->
+    <div class="flex flex1 column">
+      <!-- 头部栏 -->
+      <div
+        style="height: 100px; z-index: 2"
+        class="baiSe"
+        
+      ></div>
+      <!-- 内容区 -->
+      <div class="flex flex1 neiRong" style="overflow: auto">
+        <!-- 左区 -->
+        <div style="flex: 3" class="flex column mg8">
+          <!-- 数据区 -->
+          <div class="flex column">
+            <!-- 广告 -->
+            <div class="lieBiaoXiang baiSe yinYing"></div>
+          </div>
+          <div class="flex shuJuQu">
+            <!-- 商品 -->
+            <div class="shuJu baiSe yinYing flex1 mgr8 mgt10 mg8"></div>
+            <div class="shuJu baiSe yinYing flex1 mgr8 mgt10 mg8"></div>
+            <div class="shuJu baiSe yinYing flex1 mgr8 mgt10 mg8"></div>
+            <div class="shuJu baiSe yinYing flex1 mgt10 mg8"></div>
+          </div>
+          <div class="flex shuJuQu">
+            <!-- 商品 -->
+            <div class="shuJu baiSe yinYing flex1 mgr8 mgt10 mg8"></div>
+            <div class="shuJu baiSe yinYing flex1 mgr8 mgt10 mg8"></div>
+            <div class="shuJu baiSe yinYing flex1 mgr8 mgt10 mg8"></div>
+            <div class="shuJu baiSe yinYing flex1 mgt10 mg8"></div>
+          </div>
+          <div class="flex shuJuQu">
+            <!-- 商品 -->
+            <div class="shuJu baiSe yinYing flex1 mgr8 mgt10 mg8"></div>
+            <div class="shuJu baiSe yinYing flex1 mgr8 mgt10 mg8"></div>
+            <div class="shuJu baiSe yinYing flex1 mgr8 mgt10 mg8"></div>
+            <div class="shuJu baiSe yinYing flex1 mgt10 mg8"></div>
+          </div>
+          <!-- 列表区，列表数据可以无限增加 -->
+          <div class="flex shuJuQu">
+            <!-- 商品 -->
+            <div class="shuJu baiSe yinYing flex1 mgr8 mgt10 mg8"></div>
+            <div class="shuJu baiSe yinYing flex1 mgr8 mgt10 mg8"></div>
+            <div class="shuJu baiSe yinYing flex1 mgr8 mgt10 mg8"></div>
+            <div class="shuJu baiSe yinYing flex1 mgt10 mg8"></div>
+          </div>
+          <div style="height: 80px; z-index: 2" class="baiSe yinYing"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
