@@ -17,29 +17,55 @@
       .flex {
         display: flex;
       }
+      /* 居中 */
+    .container {
+        display: flex; /* 定义为flex容器 */
+        justify-content: center; /* 水平居中 */
+        top: 0;
+        height: auto;
+    }
+    /* 接地 */
+    .image-bottom {
+    position: absolute;
+    top: 600px;
+    width: 350px;
+  }
       /* 占满比例 */
       .flex1 {
         flex: 1;
       }
+
       /* 竖向 */
       .column {
         flex-direction: column;
       }
+
       /* 阴影 */
       .yinYing {
         box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px,
           rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
       }
+
       /* 白色背景 */
       .baiSe {
         background-color: #fff;
       }
-      .hong{
-        background-color: #F08080;
+
+      /* 灰色背景 */
+      .hui {
+        background-color: gray;
       }
+      /* 橙色 */
+      .cheng{
+        background-color: #ef7503;
+      }
+
       /* 上下左右外边距 */
       .mg8 {
         margin: 8px;
+      }
+      .mgl9 {
+        margin-left: 9px;
       }
       /* 右外边距 */
       .mgr8 mgt8 {
@@ -54,15 +80,19 @@
       }
       /* 四个小盒子 */
       .shuJu {
-        height: 125px;
+        height: 300px;
       }
       /* 中间的大盒子 */
       .lieBiaoXiang {
         height: 200px;
       }
+      /* 介绍 */
+      .xiaohe{
+        height: 50px;
+      }
       /* 导航条 */
       .daoHang {
-        padding: 10px 20px;
+        padding: 20px 20px;
         border-bottom: 1px solid rgb(201, 201, 201);
         font-size: 14px;
         color: #666;
@@ -71,14 +101,247 @@
         display: none; /* Chrome Safari */
       }
 
-      /* 当屏幕宽度小于600px时要改变的css */
-      
+      * {
+        margin: 0;
+
+        padding: 0;
+
+        /* 去掉内外边距 */
+
+        text-decoration: none;
+
+        list-style: none;
+
+        /* 去掉不必要的样式 */
+      }
+
+      .libt {
+        /* 设置它的宽高 */
+
+        width: 200px;
+
+        height: 40px;
+
+        /* 让它里面的字水平垂直居中 */
+
+        text-align: center;
+
+        line-height: 40px;
+      }
+
+      /* 设置超链接样式 */
+
+      .libt a {
+        color: #000;
+
+        display: block;
+      }
+
+      /* 设置鼠标悬停时背景色为灰色 */
+
+      .libt a:hover {
+        color: #250ad5;
+      }
+
+      .droplist {
+        /* 我们给它背景色，给它阴影 */
+
+        background: #fff;
+
+        box-shadow: 0px 1px 2px #666;
+
+        /* 这里是隐藏 */
+
+        display: none;
+      }
+
+      /* 这里是显示 */
+
+      .libt:hover .droplist {
+        display: block;
+      }
+
+      .droplist li {
+        /* 用上边框线把每一项隔开 */
+
+        border-top: 1px solid #ccc;
+
+        height: 40px;
+      }
+
+      /* 这里是显示二级下拉 */
+
+      .droplist li:hover .droplist2 {
+        display: block;
+      }
+
+      .droplist2 {
+        /* 先进行相对定位 */
+
+        position: relative;
+
+        left: 100px;
+
+        top: -40px;
+
+        /* 加背景色 */
+
+        background: #f4f0f0;
+
+        box-shadow: 0px 1px 2px #f1eded;
+
+        /* 隐藏 */
+
+        display: none;
+      }
+      ul li {
+				list-style: none;
+			}
+			
+			body,
+			html {
+				width: 100%;
+				height: 100%;
+			}
+			
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.headder {
+				width: 100%;
+				height: 8%;
+				background-color: #1D8FF0;
+				text-align: center;
+				margin-top: auto;
+				display: flex;
+				/*实现垂直居中*/
+				align-items: center;
+				/*实现水平居中*/
+				justify-content: center;
+				text-align: justify;
+				margin: 0 auto;
+			}
+			
+			.headder p {
+				color: white;
+				font-size: 24px;
+				line-height: 60px;
+				font-family: "Microsoft YaHei";
+			}
+			
+			#body_right {
+				width: calc(100% - 200px);
+				float: left;
+				min-height: 100%;
+				display: inline-block;
+				vertical-align: top;
+				background: #f3faff;
+				font-size: 32px;
+				color: #999;
+				text-align: center;
+			}
+			
+			.body_left {
+				padding: 0;
+				width: 200px;
+				min-height: 100%;
+				display: inline-block;
+				background: #ffffff;
+				float: left;
+				font-size: 16px;
+				color: #fff;
+			}
+			
+			.body_wai {
+				width: 100%;
+				height: 100%;
+			}
+			
+			.body_wai ul li {
+				font-size: 20px;
+			}
+			
+			.biao1 {
+				display: none;
+			}
+			
+			.bi:hover .biao1 {
+				transition-duration: 0.5s;
+				display: block;
+			}
+			
+			.biao2 {
+				display: none;
+			}
+			
+			.bi:hover .biao2 {
+				transition-duration: 0.5s;
+				display: block;
+			}
+			
+			.bi:hover #er {
+				transition-duration: 0.5s;
+				background-color: #413232;
+				border-left-width: 6px;
+				border-left-style: solid;
+				border-left-color: #1d8ff0;
+				cursor: pointer;
+			}
+			
+			.bi:hover #cla {
+				transition-duration: 0.5s;
+				background-color: #ffffff;
+			}
+			
+			.bi2:hover #cla {
+				transition-duration: 0.5s;
+				background-color: #3A3E50;
+			}
+			
+			#yiji {
+				background-color: #ffffff;
+				width: 100%;
+        color: rgb(0, 0, 0);
+        display: block;
+			}
+			
+      #yiji:hover {
+				color: rgb(83, 5, 252);
+			}
+
+			.bi2:hover .biao2 {
+				transition-duration: 0.5s;
+				display: block;
+			}
+			
+			.bi2:hover #er {
+				transition-duration: 0.5s;
+				background-color: #f0f2f7;
+			}
+			
+			#cla {
+				color: gray;
+			}
+			
+			#cla:hover {
+				color: rgb(83, 5, 252);
+			}
+			
+			#er {
+				padding-left: 10%;
+			}
+			
+			#cla {
+				padding-left: 20%;
+			}
     </style>
   </head>
   <body class="flex">
     <!-- 侧边栏 -->
     <div
-      style="width: 150px; z-index: 3"
+      style="width: 200px; z-index: 3"
       class="ceBian flex column baiSe yinYing"
     >
       <!-- 侧边头像栏 -->
@@ -95,26 +358,132 @@
           alt="logo"
           src="https://306llss.github.io/shopping/1.jpg"
           width="90px"
-          height="80px"
+          height="110px"
         />
       </div>
       <!-- 导航栏 -->
-      <div class="flex1">
-        <div class="daoHang">导航</div>
-        <div class="daoHang">导航</div>
-        <div class="daoHang">导航</div>
-        <div class="daoHang">导航</div>
-        <div class="daoHang">导航</div>
-      </div>
-    </div>
+      <div >
+      </div
+
+		<div class="body_wai ">
+			<div class="body_left se" style="max-height: 650px;">
+				<ul>
+					<li class="biao">
+						<ul class="bii">
+							<li class="bi">
+								<div id="yiji">
+								上装
+								</div>
+								<ul class="biao1">
+									<li>
+										<div id="cla">
+										羽绒服
+										</div>
+										<li>
+											<div id="cla">
+											西服
+											</div>
+										</li>
+                    <li>
+											<div id="cla">
+											T恤
+											</div>
+										</li>
+                    <li>
+											<div id="cla">
+											毛衣
+											</div>
+										</li>
+                    <li>
+											<div id="cla">
+											卫衣
+											</div>
+										</li>
+									</li>
+								</ul>
+							</li>
+							<li class="bi">
+								<div id="yiji">
+									下装
+								</div>
+								<ul class="biao1">
+									<li>
+										<div id="cla">
+											休闲裤
+										</div>
+									</li>
+                  <li>
+											<div id="cla">
+											运动裤
+											</div>
+										</li>
+                    <li>
+											<div id="cla">
+											牛仔裤
+											</div>
+										</li>
+                    <li>
+											<div id="cla">
+											短裙
+											</div>
+										</li>
+                    <li>
+											<div id="cla">
+											长裙
+											</div>
+										</li>
+                    <li>
+											<div id="cla">
+											超短裙
+											</div>
+										</li>
+								</ul>
+							</li>
+              <li class="bi">
+								<div id="yiji">
+									连衣装
+								</div>
+								<ul class="biao1">
+									<li>
+										<div id="cla">
+											连衣裙
+										</div>
+									</li>
+                  <li>
+											<div id="cla">
+											泳衣
+											</div>
+										</li>
+                    <li>
+											<div id="cla">
+											睡衣
+											</div>
+										</li>
+                    <li>
+											<div id="cla">
+											睡袍
+											</div>
+										</li>
+                    <li>
+											<div id="cla">
+											旗袍
+											</div>
+										</li>
+								</ul>
+							</li>
+						</ul>
+						<br />
+						<!--   	分割线-->
+						
+			</div>
+		</div>
     <!-- 主区域 -->
     <div class="flex flex1 column">
       <!-- 头部栏 -->
-      <div
-        style="height: 100px; z-index: 2"
-        class="baiSe"
-        
-      ></div>
+      <div style="height: 130px; z-index: 2" class="baiSe yinYing mgl9">
+        <!-- 搜索栏
+        <input type="text" class="center" placeholder="搜索" /> -->
+      </div>
       <!-- 内容区 -->
       <div class="flex flex1 neiRong" style="overflow: auto">
         <!-- 左区 -->
@@ -123,6 +492,18 @@
           <div class="flex column">
             <!-- 广告 -->
             <div class="lieBiaoXiang baiSe yinYing"></div>
+          </div>
+          <div class="flex shuJuQu">
+            <!-- 商品 -->
+            <div class="shuJu container baiSe yinYing flex1 mgr8 mgt10 mg8">
+              <img src='https://img10.360buyimg.com/n1/s350x449_jfs/t6049/65/1882721497/69606/4ed9a100/59378127Ned91eab2.jpg%21cc_350x449.jpg'alt='网络出错了！！！'width="350px" height="250px">
+              <div class="cheng image-bottom container flex xiaohe">
+                <a  href="https://306llss.github.io/shopping/">商品</a>
+              </div>
+            </div>
+            <div class="shuJu baiSe yinYing flex1 mgr8 mgt10 mg8"></div>
+            <div class="shuJu baiSe yinYing flex1 mgr8 mgt10 mg8"></div>
+            <div class="shuJu baiSe yinYing flex1 mgt10 mg8"></div>
           </div>
           <div class="flex shuJuQu">
             <!-- 商品 -->
