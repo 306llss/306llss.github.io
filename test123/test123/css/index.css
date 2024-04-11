@@ -1,0 +1,88 @@
+/* 头部开始 */
+.header {
+    width:100%;
+    height:140px;
+    border-bottom: 1px solid #ddd;
+    background-color: rgb(255, 255, 255);
+}
+
+.wrap{
+    width: 1190px;
+    margin: 0 auto;
+}
+
+.header-box{
+    position: relative;
+    height: 140px;
+    background-color: rgb(255, 255, 255);
+}
+
+.logo{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 190px;
+    height: 120px;
+    background-color: peachpuff;
+    background: url(./../images/淘东.jpg) no-repeat;
+    background-position: 0 0;
+}
+
+.search{
+    width: 100%;
+    height: 60px;
+}
+
+.search-m{
+    position: relative;
+    width: 100%;
+    height: 60px;
+}
+
+.search_logo{
+    display: none;
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 125px;
+    height: 40px;
+}
+
+.form{
+    position: absolute;
+    left: 260px;
+    top: 25px;
+    width: 546px;
+    height: 32px;
+    border: 2px solid #e2231a;
+    background-color: #fff;
+}
+
+.keyword{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 425px;
+    height: 26px;
+    padding: 2px 44px 2px 17px;
+    border: 1px solid transparent;
+    line-height: 26px;
+    font-size: 12px;
+    color: #333;
+    outline: none;
+}
+
+.form button{
+    position: absolute;
+    right: 0;
+    width: 58px;
+    height: 32px;
+    line-height: 32px;
+    border: none;
+    background-color: #e2231a;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+}
+/* 头部结束 */
