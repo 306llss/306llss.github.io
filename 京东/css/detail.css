@@ -353,7 +353,7 @@ body {
 .tab-con {
     width: 990px;
     height: 600px;
-    background-color: palevioletred;
+    background-color: rgb(255, 255, 255);
 }
 
 .tab-items {
